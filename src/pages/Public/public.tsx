@@ -39,7 +39,7 @@ if (!API_URL) {
               Finetech
             </Typography>
           </Box>
-          <Button variant="outlined">Login</Button>
+          <Button variant="outlined" onClick={()=>navigate(`${API_URL}`)}>Login</Button>
         </Toolbar>
       </AppBar>
 
