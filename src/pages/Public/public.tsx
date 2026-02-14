@@ -20,13 +20,9 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import { useNavigate } from "react-router-dom";
 
 export default function FinetechLandingPage() {
-    const API_URL = import.meta.env.VITE_PROD_URL;
+   
     const navigate=useNavigate()
 
-if (!API_URL) {
-  throw new Error("VITE_PROD_URL is not defined! Check your .env file.");
-}
- 
 
   return (
     <Box sx={{ bgcolor: "#f8fafc", minHeight: "100vh" }}>
@@ -39,7 +35,7 @@ if (!API_URL) {
               Finetech
             </Typography>
           </Box>
-          <Button variant="outlined" onClick={()=>navigate(`${API_URL}/login`)}>Login</Button>
+          <Button variant="outlined" onClick={()=>navigate(`${import.meta.env.VITE_FRONT_URL}/login`)}>Login</Button>
         </Toolbar>
       </AppBar>
 
